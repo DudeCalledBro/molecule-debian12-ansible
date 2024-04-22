@@ -21,8 +21,8 @@ RUN apt-get update -qy \
         sudo \
         systemd \
         systemd-sysv \
-        wget \
         vim \
+        wget \
     && apt-get autoremove -qy \
     && apt-get clean -qy \
     && rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man
