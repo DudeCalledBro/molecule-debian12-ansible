@@ -6,7 +6,7 @@ This repository is used to build Debian 12 (Bookworm) Docker images for Ansible 
 
 ## Tags
 
-- `latest`: Latest Debian 12 with Python 3.x
+- `latest`: [Debian 12 Upstream](https://hub.docker.com/_/debian) with Python 3.x
 
 ## Build
 

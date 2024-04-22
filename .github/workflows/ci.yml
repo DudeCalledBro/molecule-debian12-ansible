@@ -1,4 +1,4 @@
-name: Build Container Image
+name: Build
 
 on:
   pull_request:
@@ -12,9 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v3
 
@@ -31,8 +28,5 @@ jobs:
       id: docker_build
       uses: docker/build-push-action@v5
       with:
-        context: ./
-        file: Dockerfile
-        platforms: linux/amd64,linux/arm64
         push: true
-        tags: ${{ github.repository }}:latest
+        tags: dudecalledbro/molecule-debian12-ansible:latest
